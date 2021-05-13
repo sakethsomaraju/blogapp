@@ -33,7 +33,7 @@ class EditBlog extends React.Component{
       submitHandler = (e)=>{
         e.preventDefault()
         console.log(this.state.title,this.state.description,this.state.editorState)
-        fetch('http://localhost:5000/updateBlog',{
+        fetch('/updateBlog',{
             method:'put',
             headers:{
                 'Content-Type':'application/json',

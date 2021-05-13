@@ -33,7 +33,7 @@ class ControlledEditor extends Component {
   submitHandler = (e)=>{
     e.preventDefault()
     // console.log(this.state.title,this.state.description,JSON.stringify(convertToRaw(this.state.editorState.getCurrentContent())))
-    fetch('http://localhost:5000/create',{
+    fetch('/create',{
       method:'post',
       headers:{
         "Content-Type":"application/json",

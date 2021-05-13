@@ -25,7 +25,7 @@ const Profile = () => {
     }
     const history = useHistory()
     useEffect(()=>{
-        fetch(`http://localhost:5000/user/${userId}`,{
+        fetch(`/user/${userId}`,{
             headers:{
                 Authorization:'Bearer '+localStorage.getItem("jwt")
             }
@@ -46,7 +46,7 @@ const Profile = () => {
                 body:data
             }).then(res=>res.json())
                 .then(data=>{
-                    fetch('http://localhost:5000/updateProfilePic',{
+                    fetch('/updateProfilePic',{
                         method:'put',
                         headers:{
                             'Content-Type':'application/json',

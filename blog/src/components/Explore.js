@@ -8,7 +8,7 @@ const Explore = () => {
     let currentPage = 1
 
     useEffect(()=>{
-        fetch('http://localhost:5000/blogs/1',{
+        fetch('/blogs/1',{
             method:'get',
             headers:{
                 'Authorization':'Bearer '+localStorage.getItem('jwt')
@@ -20,7 +20,7 @@ const Explore = () => {
 
     const nextHandler = ()=>{
         currentPage += 1
-        fetch(`http://localhost:5000/blogs/${currentPage}`,{
+        fetch(`/blogs/${currentPage}`,{
             method:'get',
             headers:{
                 'Authorization':'Bearer '+localStorage.getItem('jwt')
